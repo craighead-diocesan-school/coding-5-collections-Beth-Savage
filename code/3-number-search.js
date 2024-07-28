@@ -4,14 +4,19 @@
 
 let numberArray = [
   1,
+  5,
   100,
   1000,
   10000,
-  1234567890
+  987654321,
+  1234567890,
+  122333444455555,
+
+
 ]
 
 function searchNumbers() {
-  let searchTarget = 1
+  let searchTarget = prompt('What number do you want to search for?')
   let searchResult = false
 
   for (let currentNumber of numberArray) {
@@ -19,6 +24,12 @@ function searchNumbers() {
       searchResult = true
     }
   }
-
-  alert(searchTarget + ' found: ' + searchResult)
+  if(searchResult == true){
+    alert(searchTarget + ' was found on the list :)')
+  } else if(searchResult ==false){
+    alert(searchTarget + ' was not found on the list :(')
+  } else{
+    alert('What did you put in. It just breaks the code.')
+  }
+  
 }
